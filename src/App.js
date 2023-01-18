@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './App.css';
 import Sidebar from './Sidebar';
 import Chat from './Chat.js'
@@ -6,14 +6,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
 function App() {
-  const [user, setUser] = useState(true)
 
   return (
     <div className="app">
-      {!user ? (
-        <h1>LOGIN</h1>
-      ) : (
-        <div className="app__body">
+      <div className="app__body">
         <Router>
           <Sidebar />
             <Routes>
@@ -24,8 +20,6 @@ function App() {
             </Routes>
         </Router>
       </div>
-      ) }
-      
     </div>
 
   // <div className="app">
